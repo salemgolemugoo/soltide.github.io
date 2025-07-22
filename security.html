@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Policy | Soltide Validator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="soltide-logo.png">
+</head>
+<body>
+  <header>
+    <img src="soltide-logo.png" alt="SolTide Logo">
+    <h1>SolTide Validator</h1>
+    <p>Riding the waves of Solana with speed, trust, and uptime.</p>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/security.html" class="active">Security</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Security Policy</h2>
+
+      <h3>1. Infrastructure Security</h3>
+      <ul>
+        <li>Validator nodes hosted in secure data centers or trusted cloud providers.</li>
+        <li>Restricted physical access to authorized personnel only.</li>
+        <li>Minimal OS setup with automatic security patching.</li>
+        <li>SSH access limited to key-based authentication from specific IPs.</li>
+        <li>Host-based and cloud firewalls applied to restrict ports.</li>
+      </ul>
+
+      <h3>2. Key Management</h3>
+      <ul>
+        <li>Validator identity keypair stored offline, only used during initialization or key rotation.</li>
+        <li>Vote account keypair stored on encrypted disk with restricted access.</li>
+        <li>Withdraw authority key stored offline on hardware or air-gapped devices.</li>
+        <li>All keys rotated regularly or upon suspicion of compromise.</li>
+      </ul>
+
+      <h3>3. Network Security</h3>
+      <ul>
+        <li>RPC endpoints are private or require authentication where possible.</li>
+        <li>DDoS mitigation includes rate limiting and upstream protection.</li>
+        <li>Peer access and gossip behavior controlled with command-line flags.</li>
+      </ul>
+
+      <h3>4. Software Security</h3>
+      <ul>
+        <li>Validator runs latest stable Solana release with verified binaries.</li>
+        <li>Monitoring setup with alerts for health, forks, and potential slashable behavior.</li>
+        <li>Validator process runs as non-root user in a locked-down environment.</li>
+      </ul>
+
+      <h3>5. Incident Response</h3>
+      <ul>
+        <li>Logs and alerts monitored for anomalies.</li>
+        <li>If compromise is suspected, validator is stopped, keys rotated, and node rebuilt.</li>
+        <li>Preventative measures in place to avoid slashing (e.g. no duplicate validator processes).</li>
+      </ul>
+
+      <h3>6. Backups & Recovery</h3>
+      <ul>
+        <li>Encrypted backups of critical keys stored in multiple secure locations.</li>
+        <li>Recovery processes documented and tested.</li>
+        <li>Snapshot-based fast bootstrapping enabled.</li>
+      </ul>
+
+      <h3>7. Policy Review</h3>
+      <ul>
+        <li>Security policies reviewed quarterly or after security events.</li>
+        <li>Internal audits conducted regularly.</li>
+      </ul>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Soltide Validator. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
